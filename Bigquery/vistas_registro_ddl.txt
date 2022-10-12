@@ -1,0 +1,6 @@
+CREATE TABLE `focused-mote-361402.registro_app_dataset.vistas_registro`
+(
+  ip STRING,
+  nombre STRING,
+  fecha STRING
+);

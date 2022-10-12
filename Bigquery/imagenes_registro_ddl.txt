@@ -1,0 +1,7 @@
+CREATE TABLE `focused-mote-361402.registro_app_dataset.imagenes_registro`
+(
+  ip STRING,
+  nombre STRING,
+  imagen STRING,
+  fecha DATETIME
+);
