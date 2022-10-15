@@ -7,15 +7,8 @@ bigqueryClient = bigquery.Client()
 
 def save_html(path, imagen64):
     with open(f"tmp/{path}.html", "w") as F:
-        F.write(f"""<!DOCTYPE html>
-                <html>
-                <head>
-                    <title>Index</title>
-                </head>
-                <body>
-                    <img src="data:image/png;base64,{imagen64}">
-                </body>
-                </html>""")
+        F.write(f"{ imagen64 }")
+
 
     bucket = storageClient.bucket("ulima-html-files")
     blob = bucket.blob(f"{path}.html")

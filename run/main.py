@@ -1,4 +1,8 @@
 import os
+
+serviceAccount = r'focused-mote-361402-ac24139c4873.json'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = serviceAccount
+
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, jsonify
 import base64
@@ -66,7 +70,7 @@ def img():
             }
         ]
     save_bigquery("focused-mote-361402.registro_app_dataset.vistas_registro",fila)
-    return html
+    return render_template("imagen.html", image_as_base64_html=html)
 
 
 if __name__ == "__main__":
